@@ -16,6 +16,7 @@ public class SpringBootTutorialApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootTutorialApplication.class, args);
 	}
+	
 	 @Bean
 	   public Docket productApi() {
 	      return new Docket(DocumentationType.SWAGGER_2).select()
