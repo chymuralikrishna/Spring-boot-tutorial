@@ -15,8 +15,8 @@ public class DemartmentServiceImpl implements DepartmentService {
 
 	@Autowired
 	private DepartmentDao departmentDao;
-	public void saveDepartment(Department department) {
-		departmentDao.save(department);
+	public Department saveDepartment(Department department) {
+		return departmentDao.save(department);
 	}
 	
 	@Override

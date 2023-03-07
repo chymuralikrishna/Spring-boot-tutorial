@@ -1,10 +1,13 @@
 package com.mk.Springboottutorial.controller;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.List;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mk.Springboottutorial.entity.Department;
 import com.mk.Springboottutorial.entity.DepartmentNotFoundException;
 import com.mk.Springboottutorial.service.DepartmentService;
-
+@CrossOrigin(origins = "*")
 @RestController
 public class DepartmentController {
 
@@ -47,5 +50,6 @@ public class DepartmentController {
 	@DeleteMapping("/departments/delete/{id}")
 	public void deleteDepartment(@PathVariable Long id){
 		departmentService.deleteDepartmentsById(id); 
+		assertEquals(0, 0);
 	}
 }

@@ -13,11 +13,13 @@ import com.mk.Springboottutorial.entity.DepartmentNotFoundException;
 @ResponseStatus
 public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler{
 	
-	@ExceptionHandler(DepartmentNotFoundException.class)
-	public ResponseEntity<ErrorMessage> departmentNotFoundException(DepartmentNotFoundException exception,WebRequest request) {
-		ErrorMessage message=new ErrorMessage(HttpStatus.NOT_FOUND,exception.getMessage());
-		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(message);
-		
-	}
+	
+	  @ExceptionHandler(DepartmentNotFoundException.class) 
+	  public ResponseEntity<Object> departmentNotFoundException(DepartmentNotFoundException exception,WebRequest
+	  request) { 
+		  return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Department is not found");
+	  
+	  }
+	 
 
 }

@@ -7,7 +7,7 @@ import com.mk.Springboottutorial.entity.DepartmentNotFoundException;
 
 public interface DepartmentService {
 
-	void saveDepartment(Department department);
+	Department saveDepartment(Department department);
 
 	List<Department> findAll();
 
