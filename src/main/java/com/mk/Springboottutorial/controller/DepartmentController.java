@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mk.Springboottutorial.entity.Department;
 import com.mk.Springboottutorial.entity.DepartmentNotFoundException;
 import com.mk.Springboottutorial.service.DepartmentService;
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 @RestController
 public class DepartmentController {
 
